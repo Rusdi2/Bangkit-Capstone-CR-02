@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".view.registerList.RegisterList">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_register"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingLeft="45dp"
+            tools:layout_editor_absoluteX="35dp"
+            tools:layout_editor_absoluteY="35dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:src="@drawable/img_cloud_raya_logos"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/img_register_list"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:src="@drawable/img_register_sites"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:layout_marginHorizontal="25dp"
+            android:text="@string/please_register_site"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_register_list" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/siteNameTextLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@+id/img_register_list"
+            app:layout_constraintStart_toStartOf="@+id/img_register_list"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:startIconDrawable="@drawable/img_site_name_gray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/siteNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="@string/site_name"
+                android:textSize="12sp"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/appKeyEditTextLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:boxBackgroundMode="none"
+            app:endIconMode="password_toggle"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@+id/img_register_list"
+            app:layout_constraintStart_toStartOf="@+id/img_register_list"
+            app:layout_constraintTop_toBottomOf="@+id/siteNameTextLayout"
+            app:startIconDrawable="@drawable/img_key">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/appKeyEditText"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="@string/app_key"
+                android:inputType="textPassword"
+                android:textSize="12sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/secretKeyEditTextLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:boxBackgroundMode="none"
+            app:endIconMode="password_toggle"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@+id/img_register_list"
+            app:layout_constraintStart_toStartOf="@+id/img_register_list"
+            app:layout_constraintTop_toBottomOf="@+id/appKeyEditTextLayout"
+            app:startIconDrawable="@drawable/img_lock">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/secretKeyEditText"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="@string/secret_key"
+                android:inputType="textPassword"
+                android:textSize="12sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnRegisterList"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/add_site"
+            android:background="@drawable/btn_bg_color"
+            app:layout_constraintEnd_toEndOf="@+id/img_register_list"
+            app:layout_constraintStart_toStartOf="@+id/img_register_list"
+            app:layout_constraintTop_toBottomOf="@+id/secretKeyEditTextLayout" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/already_register_site"
+            app:layout_constraintEnd_toEndOf="@+id/img_register_list"
+            app:layout_constraintStart_toStartOf="@+id/img_register_list"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegisterList" />
+
+        <TextView
+            android:id="@+id/tvSiteList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/site_list"
+            android:textColor="@color/primary_default"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/img_register_list"
+            app:layout_constraintStart_toStartOf="@+id/img_register_list"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
