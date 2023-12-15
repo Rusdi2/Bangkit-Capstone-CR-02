@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvVmList"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    android:layout_marginTop="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:id="@+id/tvHostName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/host_name"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tvLaunchDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/vm_launch_created"
+            android:textSize="10sp"
+            android:textColor="@color/secondary_default"
+            android:layout_marginTop="3dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvHostName"
+            app:layout_constraintTop_toBottomOf="@+id/tvHostName" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivCountryFlag"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp"
+            android:contentDescription="@string/flag"
+            android:elevation="10dp"
+            app:civ_border_width="0.5dp"
+            app:civ_border_color="@color/secondary_focus"
+            app:layout_constraintStart_toStartOf="@+id/tvHostName"
+            app:layout_constraintTop_toBottomOf="@+id/tvHostName"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tvLocationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location_name"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCountryFlag"
+            app:layout_constraintStart_toEndOf="@+id/ivCountryFlag"
+            app:layout_constraintTop_toTopOf="@+id/ivCountryFlag" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivVmState"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            tools:src="@tools:sample/avatars"
+            android:layout_marginStart="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCountryFlag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivCountryFlag"
+            app:layout_constraintTop_toTopOf="@+id/ivCountryFlag" />
+
+        <TextView
+            android:id="@+id/tvVmState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vm_state"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivVmState"
+            app:layout_constraintStart_toEndOf="@+id/ivVmState"
+            app:layout_constraintTop_toTopOf="@+id/ivVmState" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivVmOs"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="OS Img"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/ivCountryFlag"
+            app:layout_constraintStart_toStartOf="@+id/ivCountryFlag"
+            app:layout_constraintTop_toBottomOf="@+id/ivCountryFlag"
+            tools:src="@tools:sample/avatars"/>
+
+        <TextView
+            android:id="@+id/tvVmOs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/os_name"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivVmOs"
+            app:layout_constraintStart_toEndOf="@+id/ivVmOs"
+            app:layout_constraintTop_toTopOf="@+id/ivVmOs" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

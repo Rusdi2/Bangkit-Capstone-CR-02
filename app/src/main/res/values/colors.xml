@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="gray_900">#3A3B45</color>
+    <color name="gray_800">#5A5C69</color>
+    <color name="gray_700">#6E707E</color>
+    <color name="secondary_default">#858796</color>
+    <color name="secondary_focus">#9698A6</color>
+    <color name="appbar_line">#E8E9F1</color>
+    <color name="gray_100">#F8F9FC</color>
+    <color name="navy">#132C5E</color>
+    <color name="blue_link">#0021F5</color>
+    <color name="primary_hover">#0076DB</color>
+    <color name="primary_default_op50">#80009EFB</color>
+    <color name="primary_default">#009EFB</color>
+    <color name="primary_light">#dce3f9</color>
+    <color name="baby_blue">#018DC9</color>
+    <color name="success_active">#169B6B</color>
+    <color name="success_default">#91CE4C</color>
+    <color name="success_light">#D2F4E8</color>
+    <color name="danger_hover">#E02D1B</color>
+    <color name="danger_default">#E74A3B</color>
+    <color name="danger_light">#FBE7E5</color>
+    <color name="warning_focus">#F7CB5B</color>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/danger_default"/>
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_pause" android:gravity="center"/>
+        </layer-list>
+    </item>
+</selector>

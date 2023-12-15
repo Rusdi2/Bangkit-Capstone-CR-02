@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToOutline="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/siteListToAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:logo="@drawable/img_cloud_raya_logos"
+            app:contentInsetEnd="190dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/appbar_line"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:id="@+id/svHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="3dp"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:id="@+id/tvTotalVm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/total_vm"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvNumberTotalVm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="-20dp"
+                    android:layout_marginTop="75dp"
+                    android:text="@string/number"
+                    android:textColor="@color/primary_default"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="83dp"
+                    android:layout_marginEnd="-20dp"
+                    android:text="@string/vm"
+                    android:textSize="22sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_see_vm_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/see_vm_list"
+                    android:textSize="12sp"
+                    android:textColor="@color/primary_default"
+                    android:layout_marginTop="125dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="end"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                app:cardElevation="3dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                <TextView
+                    android:id="@+id/tvRunningVm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/running_vm"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvNumberRunningVm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="-20dp"
+                    android:layout_marginTop="75dp"
+                    android:text="@string/number"
+                    android:textColor="@color/success_default"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="83dp"
+                    android:layout_marginEnd="-20dp"
+                    android:text="@string/vm"
+                    android:textSize="22sp"
+                    android:textStyle="normal" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                app:cardElevation="3dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cardView2">
+
+                <TextView
+                    android:id="@+id/tvStoppedVm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/stopped_vm"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvNumberStoppedVm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="-20dp"
+                    android:layout_marginTop="75dp"
+                    android:text="@string/number"
+                    android:textColor="@color/danger_hover"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="83dp"
+                    android:layout_marginEnd="-20dp"
+                    android:text="@string/vm"
+                    android:textSize="22sp"
+                    android:textStyle="normal" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                app:cardElevation="3dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cardView3">
+
+                <TextView
+                    android:id="@+id/tvTotalDisk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/total_disk"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvNumberTotalDisk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="-20dp"
+                    android:layout_marginTop="75dp"
+                    android:text="@string/number"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="83dp"
+                    android:layout_marginEnd="-20dp"
+                    android:text="@string/gb"
+                    android:textSize="22sp"
+                    android:textStyle="normal" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="3dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cardView4">
+
+                <TextView
+                    android:id="@+id/tvTotalCpu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/total_cpu"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvNumberTotalCpu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="-35dp"
+                    android:layout_marginTop="75dp"
+                    android:text="@string/number"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="83dp"
+                    android:layout_marginEnd="-20dp"
+                    android:text="@string/cores"
+                    android:textSize="22sp"
+                    android:textStyle="normal" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="3dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+                <TextView
+                    android:id="@+id/tvTotalRam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/total_ram"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvNumberTotalRam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="-20dp"
+                    android:layout_marginTop="75dp"
+                    android:text="@string/number"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="83dp"
+                    android:layout_marginEnd="-20dp"
+                    android:text="@string/mb"
+                    android:textSize="22sp"
+                    android:textStyle="normal" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/primary_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
