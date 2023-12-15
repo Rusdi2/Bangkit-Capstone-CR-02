@@ -1,7 +1,0 @@
-Flask
-prometheus_client
-tensorflow
-requests
-numpy
-datetime
-gunicorn
